@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @layer base {
+    body {
+      @apply bg-black text-white;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply font-bold;
+    }
+    li {
+      cursor: pointer;
+      list-style-type: none;
+    }
+    
+  }
+  :root {
+    --background: white;
+    --text-primary: black;
+    --text-secondary: royalblue;
+    --accent: purple;
+  }
+  [data-theme='dark']{
+    --background: black;
+    --text-primary: white;
+    --text-secondary: grey;
+    --accent: darkred;
+  }
+
+  @layer components {
+    .disabled {
+      @apply cursor-not-allowed opacity-50
+    }
+    .single-article h1 {
+      @apply text-3xl font-bold py-2
+    }
+    .single-article h2 {
+      @apply text-xl font-bold py-2
+    }
+    .single-article h3 {
+      @apply text-lg font-bold py-2
+    }
+    .single-article pre {
+      @apply text-green-500 bg-gray-200 my-6;
+    }
+    .single-article pre {
+      @apply my-4 py-4 border-l-4 bg-gray-400 text-gray-500
+    }
+  }
+  
